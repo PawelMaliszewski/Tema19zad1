@@ -35,13 +35,13 @@
     </div>
     <div class="radio">
         <div>
-            <label for="radio" style="margin-right: 110px">Płeć</label>
+            <label style="margin-right: 110px">Płeć</label>
         </div>
         <div>
-            <input type="radio" name="gender" checked />
+            <input type="radio" name="gender" id="female" checked />
             <label for="female">Kobieta</label>
             <br />
-            <input type="radio" name="gender" />
+            <input type="radio" name="gender" id="male" />
             <label for="male">Mężczyzna</label>
         </div>
     </div>
@@ -67,11 +67,13 @@
     <div class="location">
         <div class="city">
             <p class="name">Miasto</p>
-            <input id="city" type="city" size="70" required />
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <input name="sds" id="city" type="text" size="70" required />
         </div>
         <div class="state">
             <p class="name">Województwo</p>
-            <select  required>
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <select required>
                 <option value="">Wybierz</option>
                 <option>dolnośląskie</option>
                 <option>kujawsko-pomorskie</option>
@@ -93,7 +95,8 @@
         </div>
         <div class="postcode">
             <p class="name">Kod pocztowy</p>
-            <input id="pc" type="postcode" required />
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <input id="postCode" type="text" required />
         </div>
     </div>
 
@@ -105,8 +108,8 @@
             >
         </div>
         <div>
-            <input type="checkbox" id="acceptTerms" />
-            <label for="acceptTerms"
+            <input type="checkbox" id="marketingAgreement" />
+            <label for="marketingAgreement"
             >Wyrażam zgodę na otrzymywanie informacji marketingowych</label
             >
         </div>
