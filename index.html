@@ -1,122 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formularz rejestracyjny</title>
-    <link rel="stylesheet" href="style.css" />
     <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-            crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
     />
-</head>
-<body>
-<form class="flex-container">
-    <h1>Rejestracja</h1>
-    <div class="fullName">
-        <label class="name" for="firstName">Imię</label>
-        <input
-                class="input"
-                type="text"
-                id="firstName"
-                placeholder="Wpisz imię"
-                required
-        />
-        <label class="name" for="lastName">Nazwisko</label>
-        <input
-                class="input"
-                type="text"
-                id="lastName"
-                placeholder="Wpisz Nazwisko"
-                required
-        />
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-12">
+        <h2>Rejestracja</h2>
+      </div>
+      <form class="row g-3">
+        <div class="col-12">
+          <label for="inputFirstName" class="form-label">Imię</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputFirstName"
+            placeholder="Wpisz imię"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputLastName" class="form-label">Nazwisko</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputLastName"
+            placeholder="Wpisz nazwisko"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <p>Płeć</p>
+        </div>
+        <div class="col-md-8">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="female"
+            />
+            <label class="form-check-label" for="female"> Kobieta </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="male"
+              checked
+            />
+            <label class="form-check-label" for="male"> Mężczyzna </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="inputEmail" class="form-label">Adres email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            placeholder="Wpisz adres email"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputPassword" class="form-label">Hasło</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            placeholder="Hasło"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Miasto</label>
+          <input type="text" class="form-control" id="inputCity" required />
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Województwo</label>
+          <select id="inputState" class="form-select" required>
+            <option selected value="">Wybierz</option>
+            <option>dolnośląskie</option>
+            <option>kujawsko-pomorskie</option>
+            <option>lubelskie</option>
+            <option>lubuskie</option>
+            <option>łódzkie</option>
+            <option>małopolskie></option>
+            <option>mazowieckie</option>
+            <option>opolskie</option>
+            <option>podkarpackie</option>
+            <option>podlaskie</option>
+            <option>pomorskie</option>
+            <option>śląskie</option>
+            <option>świętokrzyskie</option>
+            <option>warmińsko-mazurskie</option>
+            <option>wielkopolskie</option>
+            <option>zachodniopomorskie</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Kod pocztowy</label>
+          <input type="text" class="form-control" id="inputZip" required />
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="gridCheck1"
+              required
+            />
+            <label class="form-check-label" for="gridCheck1">
+              Akceptuje <a href="regulamin.html">regulamin</a>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck2" />
+            <label class="form-check-label" for="gridCheck2">
+              Wyrażam zgodę na otrzymywanie informacji marketingowych
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Rejestracja</button>
+        </div>
+      </form>
     </div>
-    <div class="radio">
-        <div>
-            <label style="margin-right: 110px">Płeć</label>
-        </div>
-        <div>
-            <input type="radio" name="gender" id="female" checked />
-            <label for="female">Kobieta</label>
-            <br />
-            <input type="radio" name="gender" id="male" />
-            <label for="male">Mężczyzna</label>
-        </div>
-    </div>
-    <div class="loginPass">
-        <label class="name" for="email">Adres email</label>
-        <input
-                class="input"
-                type="email"
-                id="email"
-                placeholder="Wpisz adres email"
-                required
-        />
-        <label class="name" for="input">Hasło</label>
-        <input
-                class="input"
-                id="input"
-                type="password"
-                placeholder="Wpisz hasło"
-                required
-        />
-    </div>
-
-    <div class="location">
-        <div class="city">
-            <p class="name">Miasto</p>
-            <!--suppress HtmlFormInputWithoutLabel -->
-            <input name="sds" id="city" type="text" size="70" required />
-        </div>
-        <div class="state">
-            <p class="name">Województwo</p>
-            <!--suppress HtmlFormInputWithoutLabel -->
-            <select required>
-                <option value="">Wybierz</option>
-                <option>dolnośląskie</option>
-                <option>kujawsko-pomorskie</option>
-                <option>lubelskie</option>
-                <option>lubuskie</option>
-                <option>łódzkie</option>
-                <option>małopolskie></option>
-                <option>mazowieckie</option>
-                <option>opolskie</option>
-                <option>podkarpackie</option>
-                <option>podlaskie</option>
-                <option>pomorskie</option>
-                <option>śląskie</option>
-                <option>świętokrzyskie</option>
-                <option>warmińsko-mazurskie</option>
-                <option>wielkopolskie</option>
-                <option>zachodniopomorskie</option>
-            </select>
-        </div>
-        <div class="postcode">
-            <p class="name">Kod pocztowy</p>
-            <!--suppress HtmlFormInputWithoutLabel -->
-            <input id="postCode" type="text" required />
-        </div>
-    </div>
-
-    <div>
-        <div>
-            <input type="checkbox" id="acceptTerms" required />
-            <label for="acceptTerms"
-            >Akceptuje <a href="regulamin.html">regulamin</a></label
-            >
-        </div>
-        <div>
-            <input type="checkbox" id="marketingAgreement" />
-            <label for="marketingAgreement"
-            >Wyrażam zgodę na otrzymywanie informacji marketingowych</label
-            >
-        </div>
-        <div>
-            <button class="btn">Rejestruj</button>
-        </div>
-    </div>
-</form>
-</body>
+  </body>
 </html>
